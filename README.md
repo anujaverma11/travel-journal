@@ -10,8 +10,13 @@
 Travel Journal website (TJW) is an online journal where a user can record details of the trip and mark it private or share it with friends.
 
 ### User Stories
-
+|   |   |   |   |   |
+|---|---|---|---|---|
+|   |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
 | Description | Status |
+|-------------|--------|
 | As a user I want to see the homepage of travel journal website. | Completed |
 | As a user I want the sign up functionality to create a valid user of TJW | Completed|
 |Add validation to the sign up process| Not Started|

@@ -1,0 +1,12 @@
+<div id="layout">
+    <%= erb :"_common" %>
+    <div style="margin-left:4%" id="main">
+      <div id="map"></div>
+        <script>
+          // Provide your access token
+          L.mapbox.accessToken = 'pk.eyJ1IjoiYW51amF2ZXJtYSIsImEiOiI0MDNhY2M1N2IzNGViOGQ4YmU1YzkyNjkzODNiMWY1YyJ9.VKFfOyVWdNswJng9xNz5Dw';
+          // Create a map in the div #map
+          L.mapbox.map('map', 'anujaverma.49cf7f9e');
+        </script>
+    </div>
+  </div>

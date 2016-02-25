@@ -1,0 +1,26 @@
+<div id="layout">
+  <%= erb :"_common" %>
+  <div id="main">
+    <div class="header">
+      <h3>Please add your journal name</h3>
+        <form action="/users/<%= @user.id %>/journals" method="post">
+
+            <label for="tripname">Journal Name:</label>
+            <input type="text" name="journalname" id="journalname"><br><br>
+            <input type="submit" name="Add visited places">
+            <div class="trip_details">
+            </div>
+            <div id="trip-itinerary-template">
+                <div class="trip-location">
+                  <label for="tripname">Destination Name:</label>
+                  <input type="text" name="tripname" id="tripname"><br><br>
+                  <label for="tripname">Destination Details:</label>
+                  <input type="text" name="tripname" id="tripname"><br><br>
+                  <textarea name="Text1" cols="40" rows="5" ... ></textarea>
+                  <button class="add">Add this place</button>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+</div>

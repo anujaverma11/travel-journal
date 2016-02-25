@@ -1,0 +1,57 @@
+#map{
+  width: 1200px;
+  height: 1000px;
+  position: absolute;
+}
+
+.journal_image {
+  max-height: 500px;
+  max-width: 500px;
+}
+
+.show {
+  display: none;
+}
+
+#heading {
+  font-family: 'Dancing Script', cursive;
+}
+
+h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+}
+
+.inner-text-color{
+  color: black;
+}
+
+body {
+  background-image: url("http://localhost:9393/map.jpg");
+  background-repeat: repeat;
+  /*background-position: center;*/
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.homepage {
+  background-image: url("http://localhost:9393/car.jpg");
+  background-color: #080808 ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  color: white;
+
+  /* Set up positioning */
+  position: absolute;
+  top: 0;
+  left: 0;*/
+
+}
+
+#trip-itinerary-template {
+  visibility: hidden;
+}

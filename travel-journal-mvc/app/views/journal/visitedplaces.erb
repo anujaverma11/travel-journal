@@ -1,0 +1,27 @@
+<div id="layout">
+  <%= erb :"_common" %>
+  <div id="main">
+    <div class="header">
+      <h3 font-family: 'Dancing Script', cursive;>Words are but pictures of our thoughts!!</h3>
+        <form action="/journals/<%= @journal.id %>/visitedplaces" method="post">
+          <label for="place_name">Place Name:</label><br>
+          <input type="text" name="place_name" id="place_name">
+          <br><br>
+          <label for="place_description">Place Details:</label><br>
+          <textarea name="place_description" cols="90" rows="5"></textarea>
+          <br><br>
+          <label for="fact_name">Fact Name:</label><br>
+          <input type="text" name="fact_name" id="fact_name">
+          <br><br>
+
+          <label for="fact_description">Fact Details:</label><br>
+          <textarea name="fact_description" cols="90" rows="5"></textarea>
+          <br><br>
+
+          <input type="submit" name="Submit">
+
+
+        </form>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div id="layout">
+  <%= erb :"_common" %>
+  <div id="main">
+    <div class="header">
+      <h3>A picture is worth a thousand words :-p</h3>
+        <form action='/upload' method='post' accept-charset="utf-8" enctype="multipart/form-data">
+          <label for='content_file'>Image</label>
+          <input type="file" name="content[file]" id="content_file" />
+          <button type='submit'>Save</button>
+        </form>
+      </div>
+    </div>
+</div>

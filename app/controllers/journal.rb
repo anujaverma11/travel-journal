@@ -8,7 +8,7 @@ post '/users/:id/journals' do
   @journal = Journal.create(user_id: params[:id],
                     journal_name: params[:journalname])
   users_journals
-  erb :"journal/visitedplaces"
+  erb :"journal/show"
 end
 
 

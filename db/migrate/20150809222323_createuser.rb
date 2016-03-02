@@ -5,6 +5,7 @@ class Createuser < ActiveRecord::Migration
       t.string :last_name, presence: true
       t.string :email, presence: true
       t.date :birth_date
+      t.string :facebookId
       t.string :facebookDisplayName
       t.string :facebookUid
       t.string :facebookProfileImageURL

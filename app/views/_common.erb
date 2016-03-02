@@ -1,17 +1,13 @@
+<div id="menu">
+  <div class="pure-menu">
 
-  <div id="menu">
-    <div class="pure-menu">
-      <a class="pure-menu-heading" id="heading">Travel Journal</a>
-      <ul class="pure-menu-list">
+    <a class="pure-menu-heading" id="heading">Travel Journal</a>
+    <ul class="pure-menu-list">
+      <li class="pure-menu-item"><a href="/users/<%= session[:user_id] %>/journals/new" class="pure-menu-link">Add a new Journal entry!</a></li>
+      <li class="pure-menu-item"><a href="" class="pure-menu-link">Homepage</a></li>
+      <li class="pure-menu-item"><a href="/logout" class="pure-menu-link">Logout</a></li>
 
-        <li class="pure-menu-item"><a href="/users/<%= session[:user_id] %>/journals/new" class="pure-menu-link">Add a new Journal entry!</a>
-        </li>
-        <li class="pure-menu-item"><a href="" class="pure-menu-link">Homepage</a>
-        </li>
-        <li class="pure-menu-item"><a href="/logout" class="pure-menu-link">Logout</a>
-        </li>
-        <a class="pure-menu-heading" id="heading">My Journals</a>
-
+      <a class="pure-menu-heading" id="heading">My Journals</a>
         <% @journal_side_list.each do |row| %>
           <% if row.user_id == session[:user_id]%>
             <li class="pure-menu-item">
@@ -19,8 +15,7 @@
             </li>
           <% end %>
         <% end %>
-
-      </ul>
-    </div>
+    </ul>
   </div>
+</div>
 

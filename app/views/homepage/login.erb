@@ -1,25 +1,31 @@
-<% if session[:error] %>
+  <% if session[:error] %>
   <%= session[:error] %>
   <% session[:error] = nil %>
 <% end %>
 <div class="homepage" align="center">
 <h1 id="heading" style="margin: 1em" align="left">Travel Journal</h1>
 <form action="/login"  method="post" class="pure-form pure-form-aligned login-form">
-  <fieldset>
+  <fieldset style="margin: 2cm 10cm 3cm 4cm">
     <div class="pure-control-group">
       <label for="username">Username</label>
       <input id="username" name ="username" class="inner-text-color" type="text" placeholder="Username">
     </div>
+
     <div class="pure-control-group">
       <label for="password">Password</label>
       <input id="password" name="password" class="inner-text-color" type="password" placeholder="Password">
     </div>
+
     <div class="pure-controls">
-      <label for="cb" class="pure-checkbox">
+      <!-- <label for="cb" class="pure-checkbox">
       <input id="cb" type="checkbox"> I've read the terms and conditions
-      </label>
+      </label> -->
       <input type="submit" value = "Login" class="pure-button pure-button-primary">
       <input type="reset" value="Signup" class="pure-button pure-button-primary hide">
+    </div>
+
+    <div class="pure-controls">
+      <button id ="facebookAuth" type="button"  class="pure-button pure-button-primary facebookAuth oauthButton">Connect using facebook</button>
     </div>
   </fieldset>
 </form>

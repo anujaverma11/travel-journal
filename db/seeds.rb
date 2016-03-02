@@ -1,26 +1,28 @@
 User.create(first_name: "Anuja",
             last_name: "verma",
             email: "some@somthing.com",
-            facebook_user_name: "anujaverma11",
-            birth_date: "11221234")
+            username: "anujaverma11",
+            birth_date: "03/02/2007",
+            address1: "55 Claremont Avenue",
+            address2: "additional line",
+            city: "Redwood City",
+            state: "CA",
+            country: "USA",
+            zipcode: 94062,
+            password: "password")
 
 User.create(first_name: "Brenda",
             last_name: "xyz",
             email: "xyz@somthing.com",
-            facebook_user_name: "xyzabc11",
-            birth_date: 11221234)
-
-Address.create(address1: "55 Claremont Avenue",
-               address2: "additional line",
-               city: "Redwood City",
-               state: "CA",
-               country: "USA",
-               zipcode: 94062,
-               user_id: 1)
-
-Logindetail.create(username: "anujaverma11",
-                  password: "something",
-                  user_id: 1)
+            username: "xyzabc11",
+            birth_date: "03/02/2007",
+            address1: "55 Claremont Avenue",
+            address2: "additional line",
+            city: "Redwood City",
+            state: "CA",
+            country: "USA",
+            zipcode: 94062,
+            password: "password")
 
 Journal.create(journal_name: "San Francisco",
                user_id: 1)

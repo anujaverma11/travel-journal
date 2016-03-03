@@ -45,3 +45,11 @@ Travel Journal website (TJW) is an online journal where a user can record detail
 | picture book print out|
 | design scrapbook|
 
+
+
+1. For smaller images (under 10mb)
+
+We have an example project that does that here: https://github.com/firebase/firepano
+
+The general approach is to load the file locally (using FileReader) so you can then store it in Firebase just as you would any other data. Since images are binary files, you'll want to get the base64-encoded contents so you can store it as a string. Or even more convenient, you can store it as a data: url which is then ready to plop in as the src of an img tag (this is what the example does)!
+

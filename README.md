@@ -1,20 +1,28 @@
-### Schema
+### Travel Journal
 
-1. (XML)[trvel_journal_scema.txt]
-2. Image
+[Travel Journal Deployed on Heroku](http://mytravel-journal.herokuapp.com/)
 
-![alt text][ScemaScreenShot.png]
+Technologies Used:
 
-### Project Description
+- Sinatra
+- Ruby
+- Javascript
+- jQuery
+- Mapbox
+- Heroku
+- Facebook API for authentication
+
+Pending:
+
+- Facebook API for Sharing and fetching Check-in
+
+
+#### Project Description
 
 Travel Journal website (TJW) is an online journal where a user can record details of the trip and mark it private or share it with friends.
 
-### User Stories
-|   |   |   |   |   |
-|---|---|---|---|---|
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
+#### User Stories
+
 | Description | Status |
 |-------------|--------|
 | As a user I want to see the homepage of travel journal website. | Completed |

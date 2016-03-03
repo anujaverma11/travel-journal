@@ -46,6 +46,7 @@ Travel Journal website (TJW) is an online journal where a user can record detail
 | design scrapbook|
 
 
+http://stackoverflow.com/questions/13955813/how-can-i-view-and-store-images-in-firebase
 
 1. For smaller images (under 10mb)
 

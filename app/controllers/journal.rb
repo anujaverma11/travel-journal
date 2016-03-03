@@ -25,7 +25,8 @@ get '/users/:user_id/journals/:id' do
 end
 
 post '/journals/:id/visitedplaces' do
+  @visitedplace = Visitedplace.create(user_id: params[:id],
+                    journal_name: params[:journalname])
   users_journals
-  # visitedplaces.erb form submission to database pending
-  erb :'pictures/upload'
+  redirect "/users/#{@journal.user_id}"
 end

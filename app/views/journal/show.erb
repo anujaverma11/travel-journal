@@ -3,23 +3,54 @@
   <div id="main">
     <div class="header">
       <h3><%= @journal.journal_name %></h3>
+      <button class="button-visited-places pure-button">Add an Entry to your Journal</button>
+      <div>
+          <form action="/journals/<%= @journal.id %>/visitedplaces" method="post" id="visitedPlaceForm" name="visitedPlaceForm" style="display:none;">
+
+            <label for="place_name">Visited Place Name:</label>
+            <input type="text" name="place_name" id="place_name"><br><br>
+            <label for="location">Location:</label>
+            <input type="text" name="location" id="location"><br><br>
+            <label for="memories">Visited Place Memories:</label>
+            <input type="text" name="memories" id="memories"><br><br>
+            <label for="visited_date">Date:</label>
+            <input type="text" name="visited_date" id="visited_date"><br><br>
+            <label for="visited_time">Time:</label>
+            <input type="text" name="visited_time" id="visited_time"><br><br>
+
+            <input type="submit" value="Add it to my journal">
+            <div class="trip_details">
+            </div>
+
+        </form>
+
+        </form>
+      </div>
     </div>
     <div class="visited_place">
-      <h4><% @visitedplaces.each do |visitedplaces| %></h4>
-            <div> <b><%= visitedplaces.place_name %></b>
-            <%= visitedplaces.location %> </div>
-            <%= visitedplaces.place_description %>
-            <%= visitedplaces.visited_date %>
-            <%= visitedplaces.visited_time %>
+      <h4><% @visitedplaces.each do |visitedplace| %></h4>
+            <div> <b><%= visitedplace.place_name %></b>
+            <%= visitedplace.location %> </div>
+            <%= visitedplace.place_description %>
+            <%= visitedplace.visited_date %>
+            <%= visitedplace.visited_time %>
 
+            <% @pictures.each do |picture| %>
+              <% if picture.visitedplace_id == visitedplace.id %>
+                <img class="journal_image" src="<%= picture.picture_name %>">
+                <br><br>
+              <% end %>
+            <% end %>
+
+            <% @facts.each do |fact| %>
+              <p><b><%= fact.fact_name %></b></p>
+              <p><%= fact.fact_description %></p>
+            <% end %>
           <% end %>
     </div>
 
-
-
-
     <div class="side_menu_2">
-      <h3></h3>
+
     </div>
   </div>
 </div>

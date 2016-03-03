@@ -249,3 +249,6 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     }
 }
 
+.button-visited-places {
+            background: rgb(223, 117, 20);
+        }

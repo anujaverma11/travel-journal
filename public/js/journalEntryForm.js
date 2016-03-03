@@ -3,7 +3,11 @@ $(document).ready(function(){
             e.preventDefault();
             console.log("Anuja")
             $("#visitedPlaceForm").show();
-
         });
+        $(".visited-places-submit").click(function(e) {
+            $("#visitedPlaceForm").hide();
+        });
+
+
     });
 

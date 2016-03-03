@@ -56,3 +56,6 @@ body {
   visibility: hidden;
 }
 
+.visited_place {
+   margin: 0cm 20cm 3cm 4cm;
+}

@@ -18,12 +18,9 @@
             <label for="visited_time">Time:</label>
             <input type="text" name="visited_time" id="visited_time"><br><br>
 
-            <input type="submit" value="Add it to my journal">
+            <input type="submit" value="Add it to my journal" class="visited-places-submit pure-button">
             <div class="trip_details">
             </div>
-
-        </form>
-
         </form>
       </div>
     </div>
@@ -34,7 +31,8 @@
             <%= visitedplace.place_description %>
             <%= visitedplace.visited_date %>
             <%= visitedplace.visited_time %>
-
+            <br>
+            <br>
             <% @pictures.each do |picture| %>
               <% if picture.visitedplace_id == visitedplace.id %>
                 <img class="journal_image" src="<%= picture.picture_name %>">
@@ -47,6 +45,8 @@
               <p><%= fact.fact_description %></p>
             <% end %>
           <% end %>
+
+
     </div>
 
     <div class="side_menu_2">

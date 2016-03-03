@@ -25,8 +25,12 @@ get '/users/:user_id/journals/:id' do
 end
 
 post '/journals/:id/visitedplaces' do
-  @visitedplace = Visitedplace.create(user_id: params[:id],
-                    journal_name: params[:journalname])
+  @visitedplace = Visitedplace.create(journal_id: params[:id],
+      place_name: params[:place_name],
+      location: params[:location],
+      place_description: params[:memories],
+      visited_date: params[:visited_date],
+      visited_time: params[:visited_time])
   users_journals
-  redirect "/users/#{@journal.user_id}"
+  redirect "/users/#{session[:user_id]}/journals/#{params[:id]}"
 end

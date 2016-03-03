@@ -3,22 +3,24 @@
   <div id="main">
     <div class="header">
       <h3><%= @journal.journal_name %></h3>
-        <% @visitedplaces.each do |row| %>
-          <h3><%= row.place_name %><br></h3>
-          <% @pictures.each do |picture| %>
-            <% if row.id == picture.visitedplace_id %>
-            <img class="journal_image" src="<%= picture.picture_name %>"><br><br>
-            <% end %>
-          <% end %>
-          <!-- <img class="journal_image" src="https://s3-us-west-1.amazonaws.com/traveljournal1/Ggb_by_night.jpg"><br> -->
-            <% @facts.each do |fact| %>
-            <% if row.id == fact.visitedplace_id %>
-            <b><%= fact.fact_name %>: </b><br>
-            <%= fact.fact_description %>
-            <% end %>
-            <br><br>
-          <% end %>
-        <% end %>
-      </div>
     </div>
+    <div class="visited_place">
+      <h4><% @visitedplaces.each do |visitedplaces| %></h4>
+            <div> <b><%= visitedplaces.place_name %></b>
+            <%= visitedplaces.location %> </div>
+            <%= visitedplaces.place_description %>
+            <%= visitedplaces.visited_date %>
+            <%= visitedplaces.visited_time %>
+
+          <% end %>
+    </div>
+
+
+
+
+    <div class="side_menu_2">
+      <h3></h3>
+    </div>
+  </div>
 </div>
+

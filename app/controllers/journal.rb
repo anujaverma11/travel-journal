@@ -8,7 +8,7 @@ post '/users/:id/journals' do
   @journal = Journal.create(user_id: params[:id],
                     journal_name: params[:journalname])
   users_journals
-  erb :"journal/show"
+  redirect "/users/#{@journal.user_id}"
 end
 
 
@@ -16,9 +16,11 @@ get '/users/:user_id/journals/:id' do
   users_journals
   @journal = Journal.find(params[:id])
   @visitedplaces = @journal.visitedplaces
-  @facts = Fact.where(visitedplace_id: @visitedplaces[0].id)
+  if @visitedplaces.count != 0
+    @facts = Fact.where(visitedplace_id: @visitedplaces[0].id)
+  end
   @pictures = Picture.all
-  # where(visitedplace_id: @visitedplaces[0].id)
+
   erb :'journal/show'
 end
 

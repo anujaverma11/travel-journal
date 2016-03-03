@@ -10,13 +10,9 @@ post "/users" do
                       birth_date: params[:birthdate],
                       username: params[:username],
                       password: params[:password])
+  auth_login(@user)
   redirect "/users/#{@user.id}"
 end
-
-#user can sign into the session
-# post "/login" do
-#   login(params[:username], params[:password])
-# end
 
 post '/login' do
   @username = params[:username]

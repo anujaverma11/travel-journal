@@ -27,7 +27,7 @@ h3 {
 }
 
 body {
-  background-image: url("http://localhost:9393/map.jpg");
+  background-image: url("../map.jpg");
   background-repeat: repeat;
   /*background-position: center;*/
   background-size: cover;
@@ -36,7 +36,7 @@ body {
 }
 
 .homepage {
-  background-image: url("http://localhost:9393/car.jpg");
+  background-image: url("../car.jpg");
   background-color: #080808 ;
   background-repeat: no-repeat;
   background-position: center;
